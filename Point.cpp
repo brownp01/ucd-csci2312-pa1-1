@@ -45,22 +45,22 @@ void Point::setZ(double newZ) {
 // Accessors
 // Return the current values of private member variables
 
-double Point::getX() {
+double Point::getX() const {
     return x;
 }
 
-double Point::getY() {
+double Point::getY() const {
     return y;
 }
 
-double Point::getZ() {
+double Point::getZ() const {
     return z;
 }
 
 // Member Function
 // Returns the distance between two points
 
-double Point::distanceTo(Point &other) {
+double Point::distanceTo(const Point &other) const {
 
     return sqrt(pow(x - other.getX(), 2)+pow(y - other.getY(), 2)+pow(z - other.getZ(),2));
 }

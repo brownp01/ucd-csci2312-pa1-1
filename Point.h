@@ -15,7 +15,7 @@ public:
     // Constructors
     Point();                                 // default constructor
     Point(double x, double y, double z);    // three-argument constructor
-    double distanceTo(Point &);             //one argument member function using a Point object as input
+    double distanceTo(const Point &) const;             //one argument member function using a Point object as input
 
     // Destructor
     ~Point();
@@ -26,9 +26,9 @@ public:
     void setZ(double newZ);
 
     // Accessor methods
-    double getX();
-    double getY();
-    double getZ();
+    double getX() const;
+    double getY() const;
+    double getZ() const;
 };
 
 

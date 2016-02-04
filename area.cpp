@@ -4,12 +4,13 @@
 
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 #include "Point.h"
 
 using namespace std;
 
 
-double computeArea( Point &a, Point &b, Point &c)
+double computeArea(const Point &a, const Point &b, const Point &c)
 {
     double s = 0;           //holds value for semiperimeter
     double lengthA = 0;     //value of length a
@@ -26,6 +27,8 @@ double computeArea( Point &a, Point &b, Point &c)
     lengthC = a.distanceTo(b);  //inserts return value of distance into length of c
 
     s = (lengthA + lengthB + lengthC)/2;     //formula to calculate semiperimeter of triangle
+
+    cout << setprecision(2) << fixed;   //formatted output to two decimal places
 
     return sqrt(s * (s - lengthA) * (s - lengthB) * (s - lengthC));     //formula to calculate area of triangle
     //returns value to main
